@@ -73,8 +73,82 @@ body.med {
             }
         }
     }
+
     section {
         display: block;
         min-height: 600px;
+
+        &.moa {
+            background-color: #F8F2E4;
+            padding-bottom: 3em;
+
+            h3 {
+                text-align: center;
+                font: 400 58px/58px 'Old Standard TT';
+                padding: 1em 0;
+                margin: 0 auto;
+            }
+
+            p {
+                font: 400 27px/58px 'Old Standard TT';
+                line-height: 1.3em;
+            }
+
+        }
+        &.monitoring {
+            background: url('../img/meds/lifepak15.jpg');
+            backgrond-size: cover;
+            background-attachment: fixed;
+            dt {
+                font: 800 27px/22px 'Open Sans', sans-serif;
+                color: #f80;
+            }
+            dd {
+                font: 400 20px/36px 'Muli', serif;
+                line-height: 1.7em;
+            }
+            .inner {
+                background: rgba(0,0,0,0.8);
+                padding: 1em;
+                color: #fff;
+            }
+        }
+        h3, p, dl {
+            font-family: 'Open Sans', sans-serif;
+            display: block;
+            width:960px;
+            max-width: 100%;
+            margin: 0 auto;
+            padding: 1rem;
+
+            dt {
+                font-weight: 800;
+                padding: 0.5em;
+            }
+            dd {
+                padding-left: 1em;
+            }
+        }
+
+        h3 {
+            font-size: 1.5rem;
+            font-weight: 800;
+            text-transform: uppercase;
+        }
+        p {
+            font-size: 21px;
+            line-height: 1.5em;
+        }
+
+        figure {
+            margin: 1em auto;
+            figcaption {
+
+            }
+            img {
+                display: block;
+                margin: 0 auto;
+            }
+        }
     }
 }
