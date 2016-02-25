@@ -1,0 +1,80 @@
+@import "compass/reset";
+
+aside.intro {
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    .inner {
+        height: 700px;
+
+        h1, h2 {
+            border-bottom: 1px solid #fff;
+            padding: 1rem 2rem 0 0;
+            margin-left: 2rem;
+            font: 32px/42px 'Open Sans', sans-serif;
+            font-weight: 800;
+            color: #fff;
+        }
+        h2 {
+            font: 22px/32px 'Open Sans', sans-serif;
+        }
+        p {
+            font-size: 21px;
+            color: #eee;
+            padding: 1rem;
+            margin: 1rem;
+        }
+    }
+}
+
+body.med {
+    &.naloxone {
+        aside.intro {
+            background-image: url('../img/meds/naloxone.png');
+
+            .inner {
+                background: rgba(0,0,0,0.75);
+                font-style: italic;
+
+                h1,h2 {
+                    color: rgba(255, 145, 0, 1);
+                    border-bottom-color: rgba(255,145,0,1);
+                }
+
+                p {
+                    font-family: 'Questrial', sans-serif;
+                    font-size: 15px;
+                    color: #eee;
+                    padding: 1rem;
+                    margin: 1rem;
+                    font-style: normal;
+                    text-transform: uppercase;
+                    width: 41%;
+                    line-height: 1.5em;
+                    text-align: justify;
+
+                    a {
+                        color: rgb(255, 145, 0);
+
+                        &:hover {
+
+                        }
+                    }
+                }
+
+                h1,h2,p {
+                    margin-left: 50%;
+                    max-width: 48%;
+                }
+                .p3 {
+                    margin-left: 60%;
+                    max-width: 31%;
+                }
+            }
+        }
+    }
+    section {
+        display: block;
+        min-height: 600px;
+    }
+}
