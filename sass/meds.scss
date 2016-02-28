@@ -29,6 +29,153 @@ aside.intro {
 }
 
 body.med {
+    &.glucagon {
+        aside.intro {
+            background: url('../img/meds/glucagon.jpg');
+            background-size: cover;
+            background-position: 50% 90%;
+
+            .inner {
+                background: rgba(0, 0, 0, 0.48);
+                font-style: italic;
+
+                h1,
+                h2 {
+                    font-family: 'Questrial';
+                    text-align: center;
+                    border-bottom: none;
+                }
+                h1 {
+                    font-size: 3.2rem;
+                    text-transform: uppercase;
+                    padding: 1em 0.5em 0.5em;
+                }
+                h2 {
+                    font-size: 2rem;
+                    font-style: italic;
+                }
+
+                p {
+                    width: 500px;
+                    margin: 1em 5em;
+                }
+            }
+        }
+
+        .moa {
+            p {
+                @include inline-block;
+                @box-sizing(border-box);
+                width: 30%;
+                vertical-align: top;
+                font-size: 1.5em;
+
+                i {
+                    display: block;
+                    text-align: center;
+                    font-size: 2em;
+                    margin: 0.5em auto;
+                }
+            }
+        }
+        .glycogen-extra {
+            h3 {
+                color: #0056FF;
+                font-family: Quattrocento;
+                text-align: center;
+                font-size: 4em;
+                width: 960px;
+            }
+
+
+            .inner {
+                color: #000;
+                .grid {
+                    .row {
+                        width: 960px;
+                        margin: 1em auto;
+
+                        p {
+                            @include inline-block;
+                            @include box-sizing(border-box);
+                            width: 48%;
+                            vertical-align:top;
+                        }
+                    }
+                }
+                p {
+                    font-family: 'Open Sans';
+                    margin: 0em auto;
+                    color: #666;
+                }
+
+                strong {
+                    color: #0056FF;
+                    text-transform: uppercase;
+                    font-weight: bold;
+                    display: block;
+                }
+            }
+        }
+
+        .indications {
+            background-image: url('../img/meds/glucometer.jpg');
+            background-size: cover;
+
+            .inner {
+
+                h3 {
+                    color: #00E60B;
+                }
+
+                ul {
+                    background: rgba(0,0,0,0.5);
+                    padding: 2em 1em;
+                    width: 960px;
+                    margin: 1em auto;
+                    color: #fff;
+                    line-height: 3em;
+                }
+            }
+        }
+        .contraindications {
+            .note {
+                border: none;
+                width: 960px;
+                i {
+                    font-size: 2em;
+                    color: #f00;
+                }
+
+                p {
+                    font-family: 'Oswald';
+                }
+                i,p {
+                    display: inline;
+                }
+            }
+        }
+
+        .administration {
+            background: #fff;
+            .inner {
+                background: #fff;
+                color: #666;
+
+                .left,
+                .right {
+                    @include inline-block;
+                    @box-sizing(border-box);
+                    vertical-align: top;
+                }
+
+                strong {
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+
     &.naloxone {
         aside.intro {
             background-image: url('../img/meds/naloxone.png');
@@ -111,7 +258,8 @@ body.med {
                 font-family: 'Oswald';
                 font-size: 2em;
                 max-width: 80%;
-                margin: 1em auto;
+                margin: 0em auto;
+                padding: 0.25em;
             }
 
             .ebm {
@@ -269,4 +417,58 @@ body.med {
             font-family: 'Font Awesome';
         }
     }
+}
+.keystone {
+    @include inline-block;
+    background: url('../img/meds/pa16.png');
+    height: 16px;
+    width: 16px;
+}
+
+$link-color: #a25700;
+.link {
+    color: $link-color;
+    text-decoration: underline;
+    &:hover {
+        color: lighten($link-color, 20%);
+    }
+    &.ext {
+        &:before {
+            @include inline-block;
+            font: normal normal normal 14px/1 FontAwesome;
+            content: "\f0c1";
+            padding-right: 0.25em;
+        }
+    }
+}
+
+.proto {
+    &.pa {
+        &:before {
+        }
+    }
+}
+.off-label-use {
+    background: lightblue;
+    color: darken(lightblue, 50%);
+}
+.note {
+    border: 1px solid #666;
+    padding: 1em;
+    margin: 1em auto;
+
+    div {
+        img, p.middle {
+            @include inline-block;
+        }
+    }
+}
+th {
+    font-weight: bold;
+    font-family: 'Oswald';
+    font-weight: 400;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 2em;
+    padding: 0.5em;
 }
