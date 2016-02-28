@@ -1,4 +1,5 @@
 @import "compass/reset";
+@import "compass/css3";
 
 aside.intro {
     background-size: cover;
@@ -77,6 +78,7 @@ body.med {
     section {
         display: block;
         min-height: 600px;
+        text-align: center;
 
         &.moa {
             background-color: #F8F2E4;
@@ -95,10 +97,85 @@ body.med {
             }
 
         }
+        &.indications,
+        &.contraindications {
+            background-color: #bdc3c7;
+            h3 {
+                font: 100px/1 'Oswald';
+                text-align: left;
+                margin: 0;
+                color: #27ae60;
+            }
+
+            li {
+                font-family: 'Oswald';
+                font-size: 2em;
+                max-width: 80%;
+                margin: 1em auto;
+            }
+
+            .ebm {
+                width: 500px;
+                text-align: center;
+
+                .links {
+                    .link {
+                        @include inline-block;
+                        @include box-sizing(border-box);
+                        width: 49%;
+                        margin: 0 auto;
+                        padding: 0.25em;
+                        text-align: center;
+                        font-size: 1.2em;
+                    }
+                }
+            }
+        }
+
+        &.contraindications {
+            h3 {
+                color: #c0392b;
+            }
+            li {
+                font-size: 1em;
+            }
+
+            table {
+                width: 90%;
+                margin: 1em auto;
+                font-size: 16px;
+                td {
+                    vertical-align:top;
+                }
+            }
+        }
+        &.administration {
+            background: url('../img/meds/intranasal.jpg');
+            background-size: cover;
+
+            .inner {
+                background: rgba(0,0,0,0.6);
+                padding: 1em;
+                color: #fff;
+
+                h4 {
+                    color: #0085FF;
+                    font-family: 'Oswald';
+                    font-size: 2rem;
+                    width: 960px;
+                    margin: 0 auto;
+                    border-bottom: 1px solid;
+                    padding-bottom: 0.25em;
+                }
+
+            }
+        }
+
         &.monitoring {
             background: url('../img/meds/lifepak15.jpg');
             backgrond-size: cover;
             background-attachment: fixed;
+
             dt {
                 font: 800 27px/22px 'Open Sans', sans-serif;
                 color: #f80;
@@ -113,6 +190,7 @@ body.med {
                 color: #fff;
             }
         }
+
         h3, p, dl {
             font-family: 'Open Sans', sans-serif;
             display: block;
@@ -135,6 +213,28 @@ body.med {
             font-weight: 800;
             text-transform: uppercase;
         }
+
+        .inner {
+            text-align: left;
+            margin: 0 auto;
+            padding: 1em;
+            box-style:border-box;
+            position: relative;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+        }
+
+        ol, ul {
+            text-align: left;
+            list-style: disc;
+
+            li {
+                list-style: disc;
+            }
+        }
+
         p {
             font-size: 21px;
             line-height: 1.5em;
@@ -149,6 +249,24 @@ body.med {
                 display: block;
                 margin: 0 auto;
             }
+        }
+    }
+}
+
+.ebm {
+    font-size: 0.9em;
+    font-family: 'Open Sans', sans-serif;
+    border: 1px solid #000;
+    padding: 0.25em;
+    margin: 0.5em auto;
+    background: #fff;
+    text-shadow: none;
+
+    a {
+        color: blue;
+
+        &:before {
+            font-family: 'Font Awesome';
         }
     }
 }
