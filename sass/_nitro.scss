@@ -1,0 +1,32 @@
+.med.nitroglycerin {
+    aside.intro {
+        background: url('../img/meds/nitro.jpg');
+        background-size: cover;
+
+        h1,h2 {
+            border-bottom: none;
+            font-family: 'Quattrocento';
+        }
+        h1 {
+            text-transform: uppercase;
+            font-size: 5em;
+            padding: 3rem;
+            color: rgb(255, 232, 39);
+            @include text-shadow(1px 1px 1px #000);
+        }
+        h2 {
+            padding: 0 3rem;
+        }
+
+        p {
+            font-family: 'Quattrocento';
+            color: #fff;
+            padding: 2rem;
+            margin: 2rem 5rem;
+            background: rgba(0, 0, 0, 0.63);
+            width: 35%;
+            font-size: 1.2rem;
+            line-height: 1.5em;
+        }
+    }
+}
